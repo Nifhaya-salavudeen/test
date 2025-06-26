@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Webpage</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-image: url("blue.jpg");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      color: #ffffff;
+      min-height: 100vh;
+    }
+
+    .overlay {
+      background-color: rgba(0, 0, 0, 0.5);
+      min-height: 100vh;
+      padding-bottom: 50px;
+      transition: background-color 0.3s ease;
+    }
+
+    header {
+      background-color: rgba(255, 0, 0, 0.85);
+      padding: 20px 0;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      letter-spacing: 1px;
+      color: #ffffff;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 30px;
+      background: rgba(255, 255, 255, 0.1);
+      padding: 15px 0;
+      backdrop-filter: blur(5px);
+    }
+
+    nav a {
+      color: #ffffff;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.1rem;
+      transition: color 0.3s ease, transform 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #ffeb3b;
+      transform: scale(1.05);
+    }
+
+    nav button {
+      padding: 6px 12px;
+      border: none;
+      border-radius: 8px;
+      background-color: #222;
+      color: #fff;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+
+    nav button:hover {
+      background-color: #444;
+    }
+
+    .content {
+      max-width: 650px;
+      margin: 120px auto;
+      background: rgba(255, 255, 255, 0.1);
+      padding: 40px;
+      border-radius: 20px;
+      text-align: center;
+      color: #f1f1f1;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    .content h3 {
+      font-size: 1.3rem;
+      line-height: 1.9;
+    }
+
+    .content h3 span {
+      color: #ffeb3b;
+      font-weight: bold;
+    }
+
+    /* ✅ Dark Mode Styles */
+    .dark-mode {
+      background-image: none !important;
+      background-color: #121212 !important;
+    }
+
+    .dark-mode .overlay {
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    .dark-mode header {
+      background-color: #b71c1c;
+    }
+
+    .dark-mode nav {
+      background-color: rgba(255, 255, 255, 0.08);
+    }
+
+    .dark-mode .content {
+      background-color: rgba(255, 255, 255, 0.05);
+      color: #e0e0e0;
+    }
+
+    .dark-mode .content h3 span {
+      color: #ffcc00;
+    }
+  </style>
+</head>
+<body>
+  <div class="overlay">
+    <header>
+      <h1>WELCOME TO WEB APPLICATION</h1>
+    </header>
+
+    <nav>
+      <a href="webpage.html">Home</a>
+      <a href="login.html">Login</a>
+      <a href="signup.html">Signup</a>
+      <a href="task.html">Tasks</a>
+      <button onclick="toggleDark()">🌙 Toggle Dark Mode</button>
+    </nav>
+
+    <div class="content">
+      <h3>
+        Hai Everyone, I am <span>Nifhaya</span>.<br><br>
+        I am a recent graduate in <span>B.Sc. Computer Science</span> with a strong passion for <span>Web Development</span>.<br>
+        As a beginner, I'm excited to be on this journey of continuous learning and creativity.<br><br>
+        <span>Thank you!</span>
+      </h3>
+    </div>
+  </div>
+
+  <script>
+    function toggleDark() {
+      document.body.classList.toggle("dark-mode");
+    }
+  </script>
+</body>
+</html>
